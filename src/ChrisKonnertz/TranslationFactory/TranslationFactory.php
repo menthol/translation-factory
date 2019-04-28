@@ -87,7 +87,7 @@ class TranslationFactory
         $this->userManager = $this->createUserManager();
         $this->translationReader = $this->createTranslationReader();
         $this->translationWriter = $this->createTranslationWriter();
-        $this->deepLy = new DeepLy();
+        $this->deepLy = new DeepLy(env('DEEPL_API_KEY'));
 
         $this->detectLanguages();
     }
